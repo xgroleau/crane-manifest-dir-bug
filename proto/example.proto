@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package example;
+
+
+// Some message
+message ExampleMessage {
+    // Some value
+    uint32 val = 1;
+}
