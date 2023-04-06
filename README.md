@@ -9,7 +9,7 @@ nix build .#example`
 ```
 
 
-## Works as intended
+## Using cargo directly
 Using the shell and `cargo build` works as intended.
 ``` sh
 nix develop
