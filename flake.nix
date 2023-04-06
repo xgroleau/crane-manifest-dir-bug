@@ -37,12 +37,11 @@
         });
 
       in with pkgs; {
-        checks = { inherit chowCli; };
+        checks = { inherit example; };
 
         devShells.default = mkShell {
           inputsFrom = builtins.attrValues self.checks.${system};
-          LD_LIBRARY_PATH =
-            lib.makeLibraryPath ([ systemd ] ++ commonArgs.buildInputs);
+          LD_LIBRARY_PATH = lib.makeLibraryPath ([ systemd ]);
         };
 
         packages = {
